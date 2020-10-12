@@ -9,11 +9,11 @@ stone = Material(diffuse = color(0.4, 0.4, 0.4), spec = 4)
 mirror = Material(spec = 64, t = REFLECTIVE)
 glass = Material(spec = 64, ior = 1.5, t= TRANSPARENT) 
 
-mcraft_cobblestone = Material(texture = Texture('./PR2/textures/cobblestone.bmp'))
-mcraft_diamond = Material(texture = Texture('./PR2/textures/diamond.bmp'))
-mcraft_dirt = Material(texture = Texture('./PR2/textures/dirt.bmp'))
-mcraft_emerald = Material(texture = Texture('./PR2/textures/emerald.bmp'))
-mcraft_stone = Material(texture = Texture('./PR2/textures/stone.bmp'))
+mcraft_cobblestone = Material(texture = Texture('./textures/cobblestone.bmp'))
+mcraft_diamond = Material(texture = Texture('./textures/diamond.bmp'))
+mcraft_dirt = Material(texture = Texture('./textures/dirt.bmp'))
+mcraft_emerald = Material(texture = Texture('./textures/emerald.bmp'))
+mcraft_stone = Material(texture = Texture('./textures/stone.bmp'))
 
 # creamos espacio para renderizar
 width = 512
