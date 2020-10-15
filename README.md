@@ -7,4 +7,11 @@ Se utilizan distintos tipos de luces (ambiente, punto y direccionales) para comp
 ## Ejecución
 1. Descargar todos los archivos del repositorio
 2. Ejecutar el archivo con el nombre run.py
-3. Se genera un archivo con el nombre output.bmp con el resultado (puede tardar algunos minutos)
+3. Se genera un archivo con el nombre mobsatnight.bmp con el resultado (esto tardará varios minutos)
+
+**NOTA:** El tiempo de ejecución es bastante largo (aproximádamente 90 minutos)
+
+## Resultado
+La imagen final debería ser igual a la siguiente
+
+![mobs-at-night](https://imgur.com/5FXKyuP.png)
