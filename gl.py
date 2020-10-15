@@ -463,7 +463,7 @@ class RayTracer(object):
             point_light_color = mathVectorAdd(point_light_color, to_add)
 
         if material.type == OPAQUE:
-            final_color = mathVectorAdd(ambient_color, mathVectorTimesScalar((1 - shadow_intensity), mathVectorAdd(diffuse_color, spec_color)))
+            final_color = mathVectorAdd(ambient_color, mathVectorAdd(directional_light_color, point_light_color))
 
             if material.texture and intersect.texture:
 
@@ -486,7 +486,20 @@ class RayTracer(object):
                 reflect_color[0] / 255
             ]
 
-            final_color = reflect_color
+            if material.texture and intersect.texture:
+
+                texture_color = material.texture.getColor(intersect.texture[0], intersect.texture[1])
+
+                texture_color = [
+                    texture_color[2] / 255,
+                    texture_color[1] / 255,
+                    texture_color[0] / 255
+                ]
+
+                final_color = mathVectorMultiplication(reflect_color, texture_color)
+            
+            else: 
+                final_color = reflect_color
 
         elif material.type == TRANSPARENT:
             
